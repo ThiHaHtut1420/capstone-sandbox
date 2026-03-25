@@ -1,0 +1,31 @@
+{
+  "name": "mordam-hardware-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Real-time hardware dashboard with optional transparent overlay.",
+  "main": "src/main/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1 --port 5173 --strictPort\" \"wait-on http://127.0.0.1:5173 && electron ./src/main/main.js\"",
+    "build:renderer": "vite build",
+    "build": "npm run build:renderer",
+    "lint": "echo \"(optional) add eslint config later\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "electron": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "systeminformation": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
+    "wait-on": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}
+
